@@ -31,9 +31,9 @@ using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Xml.Serialization;
-using DrOpen.DrCommon.DrData;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DrOpen.DrCommon.DrData.Exceptions;
+using DrOpen.DrData.DrDataObject;
+using DrOpen.DrData.DrDataObject.Exceptions;
 
 namespace UTestDrData
 {
@@ -761,9 +761,9 @@ namespace UTestDrData
         {
             var a1 = GetStockAttributesCollection();
             var a2 = new DDAttributesCollection();
-            var newValue = new DrOpen.DrCommon.DrData.DDValue(1);
+            var newValue = new DDValue(1);
             a2.Add(TEST_ENUM.TEST_ENUM_a, newValue);
-            a1.Merge(a2, DrOpen.DrCommon.DrData.ResolveConflict.SKIP);
+            a1.Merge(a2, ResolveConflict.SKIP);
             Assert.IsTrue(a1 == GetStockAttributesCollection(), "The both attribute collection must be equals.");
             Assert.IsFalse(a1.GetValue(TEST_ENUM.TEST_ENUM_a, null) == newValue, "The attribute must have previous value.");
         }
@@ -772,9 +772,9 @@ namespace UTestDrData
         {
             var a1 = GetStockAttributesCollection();
             var a2 = new DDAttributesCollection();
-            var newValue = new DrOpen.DrCommon.DrData.DDValue(1);
+            var newValue = new DDValue(1);
             a2.Add(TEST_ENUM.TEST_ENUM_a, newValue);
-            a1.Merge(a2, DrOpen.DrCommon.DrData.ResolveConflict.OVERWRITE);
+            a1.Merge(a2, ResolveConflict.OVERWRITE);
             Assert.IsFalse(a1 == GetStockAttributesCollection(), "The both attribute collection cannot be equals.");
             Assert.IsTrue(a1.GetValue(TEST_ENUM.TEST_ENUM_a, null) == newValue, "The attribute must have new value.");
         }
@@ -783,12 +783,12 @@ namespace UTestDrData
         {
             var a1 = GetStockAttributesCollection();
             var a2 = new DDAttributesCollection();
-            var newValue = new DrOpen.DrCommon.DrData.DDValue(1);
+            var newValue = new DDValue(1);
             a2.Add(TEST_ENUM.TEST_ENUM_a, newValue);
 
             try
             {
-                a1.Merge(a2, DrOpen.DrCommon.DrData.ResolveConflict.THROW_EXCEPTION);
+                a1.Merge(a2, ResolveConflict.THROW_EXCEPTION);
                 Assert.Fail("Cannot catch exception!");
             }
             catch (DDAttributeExistsException e)

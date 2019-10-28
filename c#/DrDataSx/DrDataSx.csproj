@@ -7,7 +7,7 @@
     <ProjectGuid>{CEF8CDD2-404D-415F-AECF-4B92CEB3A23D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DrDataSx</RootNamespace>
+    <RootNamespace>DrOpen.DrData.DrDataSx</RootNamespace>
     <AssemblyName>DrDataSx</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -45,15 +45,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DrData\DrData.csproj">
-      <Project>{c984c775-1807-4157-ba4b-5d5fccce577b}</Project>
-      <Name>DrData %28DrData\DrData%29</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="License.DrDataSx.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DrDataObject\DrDataObject.csproj">
+      <Project>{c984c775-1807-4157-ba4b-5d5fccce577b}</Project>
+      <Name>DrDataObject</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

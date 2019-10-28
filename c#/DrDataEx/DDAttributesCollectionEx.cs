@@ -1,10 +1,10 @@
-﻿using DrOpen.DrCommon.DrData.Exceptions;
+﻿using DrOpen.DrData.DrDataObject.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace DrOpen.DrCommon.DrData
+namespace DrOpen.DrData.DrDataObject
 {
     public static class DDAttributesCollectionEx
     {

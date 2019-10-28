@@ -25,7 +25,7 @@
 
  */
 
-using DrOpen.DrCommon.DrData;
+using DrOpen.DrData.DrDataObject;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Threading;
 

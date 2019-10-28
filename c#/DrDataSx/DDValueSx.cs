@@ -31,10 +31,10 @@ using System.Text;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
-using DrOpen.DrCommon.DrData;
-using DrOpen.DrCommon.DrData.Exceptions;
+using DrOpen.DrData.DrDataObject;
+using DrOpen.DrData.DrDataObject.Exceptions;
 
-namespace DrOpen.DrCommon.DrDataSx
+namespace DrOpen.DrData.DrDataSx
 {
     /// <summary>
     /// provides XML formating serialization and deserialization for DDValue of the 'DrData'
@@ -448,7 +448,7 @@ namespace DrOpen.DrCommon.DrDataSx
 
         /// <summary>
         /// Returns the .Net type by numeric type. If type doesn't support the function will throw
-        /// the exception <exception cref="DrOpen.DrCommon.DrData.Exceptions.DDTypeIncorrectException" 
+        /// the exception <exception cref="DrOpen.Exceptions.DDTypeIncorrectException" 
         /// </summary>
         /// <param name="type"></param>
         /// <returns></returns>
@@ -482,7 +482,7 @@ namespace DrOpen.DrCommon.DrDataSx
 
         /// <summary>
         /// returns the numberic of supported .Net type. If type is not supported function will throw 
-        /// the exception <exception cref="DrOpen.DrCommon.DrData.Exceptions.DDTypeIncorrectException" 
+        /// the exception <exception cref="DrOpen.Exceptions.DDTypeIncorrectException" 
         /// </summary>
         /// <param name="t">.Net type</param>
         /// <returns></returns>

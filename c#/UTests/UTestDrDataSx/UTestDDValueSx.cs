@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DrOpen.DrCommon.DrData;
-using DrOpen.DrCommon.DrDataSx;
+using DrOpen.DrData.DrDataObject;
+using DrOpen.DrData.DrDataSx;
 using System.IO;
 using UTestDrData;
 using System.Xml.Serialization;
@@ -32,7 +32,7 @@ namespace UTestDrDataSe
         [TestMethod, TestCategory(TEST_CATEGORY), TestCategory(CLASS_CATEGORY)]
         public void TestDDValueXmlSerializationNullFromXML()
         {
-            ValidateXMLDeserialization(new DDValue(), UTestDrDataCommon.GetMemoryStreamFromString("<" + DrOpen.DrCommon.DrDataSx.DDSchema.XML_SERIALIZE_NODE_VALUE + " t='" +   DrOpen.DrCommon.DrDataSx.DDSchema.XML_SERIALIZE_VALUE_TYPE_NULL +  "' />"));
+            ValidateXMLDeserialization(new DDValue(), UTestDrDataCommon.GetMemoryStreamFromString("<" + DrOpen.DrData.DrDataSx.DDSchema.XML_SERIALIZE_NODE_VALUE + " t='" +   DrOpen.DrData.DrDataSx.DDSchema.XML_SERIALIZE_VALUE_TYPE_NULL +  "' />"));
         }
         [TestMethod, TestCategory(TEST_CATEGORY), TestCategory(CLASS_CATEGORY)]
         public void TestDDValueXmlSerializationNull()

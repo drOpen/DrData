@@ -1,13 +1,13 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DrOpen.DrCommon.DrData;
-using DrOpen.DrCommon.DrDataSx;
+using DrOpen.DrData.DrDataObject;
+using DrOpen.DrData.DrDataSx;
 using System.IO;
 using UTestDrData;
 using System.Xml.Serialization;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
-using DrOpen.DrCommon.DrData.Exceptions;
+using DrOpen.DrData.DrDataObject.Exceptions;
 using System.Text;
 
 namespace UTestDrDataSe

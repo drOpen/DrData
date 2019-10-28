@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
-using DrOpen.DrCommon.DrData;
+using DrOpen.DrData.DrDataObject;
 
 namespace DrDataSample
 {

@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DrOpen.DrCommon.DrData;
-using DrOpen.DrCommon.DrDataSj;
+using DrOpen.DrData.DrDataObject;
+using DrOpen.DrData.DrDataSj;
 using System.Text;
 
 namespace UTestDrDataSj

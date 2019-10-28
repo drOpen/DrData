@@ -30,9 +30,9 @@ using System.Text;
 using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using DrOpen.DrCommon.DrData;
+using DrOpen.DrData.DrDataObject;
 
-namespace DrOpen.DrCommon.DrDataSj
+namespace DrOpen.DrData.DrDataSj
 {
     /// <summary>
     /// provides json formating serialization and deserialization for DDAttributesCollection of the 'DrData'

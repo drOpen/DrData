@@ -3,8 +3,8 @@ using System.Text;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DrOpen.DrCommon.DrData;
-using DrOpen.DrCommon.DrDataSj;
+using DrOpen.DrData.DrDataObject;
+using DrOpen.DrData.DrDataSj;
 
 namespace UTestDrDataSj
 {

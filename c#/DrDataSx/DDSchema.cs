@@ -26,10 +26,9 @@
 
  */
 
-using DrOpen.DrCommon.DrData.Exceptions;
 using System;
 
-namespace DrOpen.DrCommon.DrDataSx
+namespace DrOpen.DrData.DrDataSx
 {
     public static class DDSchema
     {

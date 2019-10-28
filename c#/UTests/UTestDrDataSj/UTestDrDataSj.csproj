@@ -63,13 +63,13 @@
     <Compile Include="UTestDDValueSj.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\DrDataObject\DrDataObject.csproj">
+      <Project>{c984c775-1807-4157-ba4b-5d5fccce577b}</Project>
+      <Name>DrDataObject</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\DrDataSj\DrDataSj.csproj">
       <Project>{3073040d-5bf2-4f7f-a56d-468a633dc320}</Project>
       <Name>DrDataSj</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\DrData\DrData.csproj">
-      <Project>{c984c775-1807-4157-ba4b-5d5fccce577b}</Project>
-      <Name>DrData</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

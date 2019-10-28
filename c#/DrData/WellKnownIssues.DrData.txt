@@ -1,4 +1,0 @@
-There are well known issues for DrData
-
-#1	If you save String[] value and one of elements is null then the return value will be String.Empty instead of null
-	https://github.com/drOpen/DrCommon/issues/1

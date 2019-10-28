@@ -30,9 +30,9 @@ using System.Text;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
-using DrOpen.DrCommon.DrData;
+using DrOpen.DrData.DrDataObject;
 
-namespace DrOpen.DrCommon.DrDataSx
+namespace DrOpen.DrData.DrDataSx
 {
     /// <summary>
     /// provides XML formating serialization and deserialization for DDAttributesCollection of the 'DrData'

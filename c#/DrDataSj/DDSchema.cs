@@ -1,5 +1,4 @@
-﻿
-/*
+﻿/*
   DDSchema.cs -- stored schema for formating of the 'DrDataSj' general purpose Data abstraction layer 1.0, October 30, 2016
  
   Copyright (c) 2013-2016 Kudryashov Andrey aka Dr
@@ -24,11 +23,11 @@
 
       Kudryashov Andrey <kudryashov.andrey at gmail.com>
 
- */
+*/
 
 using System;
 
-namespace DrOpen.DrCommon.DrDataSj
+namespace DrOpen.DrData.DrDataSj
 {
     public static class DDSchema
     {

@@ -63,9 +63,9 @@
     <Compile Include="UTestDrDataCommon.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\DrData\DrData.csproj">
+    <ProjectReference Include="..\..\DrDataObject\DrDataObject.csproj">
       <Project>{c984c775-1807-4157-ba4b-5d5fccce577b}</Project>
-      <Name>DrData</Name>
+      <Name>DrDataObject</Name>
     </ProjectReference>
     <ProjectReference Include="..\UTestDrData\UTestDrData.csproj">
       <Project>{4a952aba-689f-403f-aef4-11196c1377ce}</Project>

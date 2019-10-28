@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DrOpen.DrCommon.DrData;
-using DrOpen.DrCommon.DrDataSx;
+using DrOpen.DrData.DrDataObject;
+using DrOpen.DrData.DrDataSx;
 using System.IO;
 using UTestDrData;
 using System.Xml.Serialization;

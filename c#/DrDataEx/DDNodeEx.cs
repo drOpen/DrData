@@ -28,7 +28,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace DrOpen.DrCommon.DrData
+namespace DrOpen.DrData.DrDataObject
 {
     public static class DDNodeEx
     {
