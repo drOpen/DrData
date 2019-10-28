@@ -1,4 +1,4 @@
 DrData
 ========
 
-data abstraction layer
+universal data abstract object
