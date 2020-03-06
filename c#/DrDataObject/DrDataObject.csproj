@@ -66,7 +66,7 @@
     <EmbeddedResource Include="Res\Msg.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Msg.Designer.cs</LastGenOutput>
-      <CustomToolNamespace>DrOpen.DrCommon.DrData.Res</CustomToolNamespace>
+      <CustomToolNamespace>DrOpen.DrData.DrDataObject.Res</CustomToolNamespace>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

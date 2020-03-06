@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BE7C26AD-BC26-4D8E-9623-5FAB01CC2A50}</ProjectGuid>
+    <ProjectGuid>{CB8174C6-6CA6-4CEF-B84C-27C5E726466D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DrOpen.DrData.DrDataEx</RootNamespace>

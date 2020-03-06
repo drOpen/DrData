@@ -8,8 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DrOpen.DrData.DrDataObject.Res
-{
+namespace DrOpen.DrData.DrDataObject.Res {
     using System;
     
     
