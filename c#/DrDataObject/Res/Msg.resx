@@ -190,6 +190,6 @@
     <value>The nodes '{0}' belong to the different trees.</value>
   </data>
   <data name="NODE_EXISTS" xml:space="preserve">
-    <value>The node with name '{0}' already exists.</value>
+    <value>The node with name '{0}' is already exists.</value>
   </data>
 </root>

@@ -1,17 +1,44 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
+using System.IO;
 using System.Text;
 using DrOpen.DrData.DrDataObject;
+using DrOpen.DrData.DrDataSx;
+
 
 namespace DrDataSample
 {
     class Program
     {
+
+        static void Serialize2File()
+        {
+            var n = new DDNode("nodeName", "nodeType");
+            n.Attributes.Add("valueInt", -1);
+
+            using (var sw = new StreamWriter("file.xml"))
+                n.Serialize(sw);
+
+            DDNode k; //= new DDNode();
+
+            using (var st = new StreamReader("file.xml"))
+                k = DDNodeSxe.Deserialize(st);
+
+            var ch1 = k.Add("1");
+            var ch2 = k.Add("2");
+            ch1.Rename("1");
+            ch1.Rename("2");
+
+
+
+
+        }
+
+
         static void Main(string[] args)
         {
-
+            Serialize2File();
             try
             {
                 var s = new string[] {"a\0bc", "def"};

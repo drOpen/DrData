@@ -1,7 +1,7 @@
 ﻿/*
-  DDNode.cs -- container for data of the 'DrData' general purpose Data abstraction layer 1.0.1, January 3, 2014
+  DDNode.cs -- container for data of the 'DrData' general purpose Data abstraction layer 1.2, January 3, 2020
  
-  Copyright (c) 2013-2014 Kudryashov Andrey aka Dr
+  Copyright (c) 2013-2020 Kudryashov Andrey aka Dr
  
   This software is provided 'as-is', without any express or implied
   warranty. In no event will the authors be held liable for any damages
@@ -21,7 +21,7 @@
 
       3. This notice may not be removed or altered from any source distribution.
 
-      Kudryashov Andrey <kudryashov.andrey at gmail.com>
+      Kudryashov Andrey <kudryashov dot andrey at gmail dot com>
 
  */
 using System;
@@ -935,12 +935,45 @@ namespace DrOpen.DrData.DrDataObject
             }
         }
         #endregion Merge
+        #region Rename
+        /// <summary>
+        /// Renames the node. The new name has to correspond the node naming rules <see cref="DDNode.IsNameCorect()"/>.
+        /// If the new name doesn't match the rule the <see cref="DDNodeIncorrectNameException"/> will be thrown. 
+        /// The new name has to be uniq in the same level. If the new name is not  uniq the <see cref="DDNodeExistsException"/> will be thrown.
+        /// </summary>
+        /// <param name="newName">the new name of the node</param>
+        public void Rename(string newName)
+        {
+            if (IsNameCorect(newName) == false) throw new Exceptions.DDNodeIncorrectNameException(newName);
+            if (newName.Equals(Name)) return; // does nothing if the previous name is equals the new name 
+            if (IsRoot)
+                Name = newName;
+            else
+            {
+                if (Parent.childNodes.ContainsKey(newName)) throw new Exceptions.DDNodeExistsException(newName);
+                var p = Parent;
+                var n = LeaveParent(); // detaches the current node
+                var oldName = Name; // keeps the previous name
+                Name = newName;
+                try
+                {
+                    p.Add(n); // add the node with new name
+                }
+                catch (Exception e)
+                {
+                    Name = oldName; // renames the node back
+                    p.Add(n);  // attaches to the parent
+                    throw new Exceptions.DDNodeExistsException(newName, e);
+                }
+            }
+        }
+        #endregion Rename
         #region Copy
-        #endregion Copy
         public DDNode Copy(DDNode destinationNode, ResolveConflict resolve)
         {
             throw new NotImplementedException();
         }
+        #endregion Copy
         #region Move
         /// <summary>
         /// Moves current node as child to destination node. The current and the destination nodes should have the same root.
@@ -990,6 +1023,5 @@ namespace DrOpen.DrData.DrDataObject
             return n1.GetRoot().Equals(n2.GetRoot());
         }
         #endregion Move
-
     }
 }

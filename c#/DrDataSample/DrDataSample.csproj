@@ -40,6 +40,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
+    <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
@@ -49,6 +50,10 @@
     <ProjectReference Include="..\DrDataObject\DrDataObject.csproj">
       <Project>{c984c775-1807-4157-ba4b-5d5fccce577b}</Project>
       <Name>DrDataObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DrDataSx\DrDataSx.csproj">
+      <Project>{cef8cdd2-404d-415f-aecf-4b92ceb3a23d}</Project>
+      <Name>DrDataSx</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

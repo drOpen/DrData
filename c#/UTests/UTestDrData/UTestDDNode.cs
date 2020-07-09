@@ -50,6 +50,9 @@ namespace UTestDrData
             TEST_ENUM_NULL,
         }
 
+        private const string TEST_CATEGORY = "DDNode";
+        private const string CLASS_CATEGORY = "DDValue";
+
         public const string aName1 = "value a->a";
         public static DateTime aValueDateTime1 = DateTime.Parse("2013-06-14T16:15:30+03:00");
 
@@ -1665,6 +1668,16 @@ namespace UTestDrData
         }
 
         #endregion Merge
+        #region Rename
+        [TestMethod, TestCategory(TEST_CATEGORY), TestCategory("Rename")]
+        public void TestRenameToTheSameName()
+        {
+            var root = GetStockHierarhy();
+            root.Rename(root.Name);
+            var child = root["a.b"];
+            child.Rename(child.Name);
+        }
+        #endregion Rename
 
     }
 }

@@ -175,6 +175,22 @@ namespace UTestDrDataSe
         }
 
         [TestMethod]
+        public void TestSerialyzeDeserialyze()
+        {
+            DDNode n = new DDNode("my favorite node");
+            using (var fs = new FileStream("node.xml", FileMode.Create, FileAccess.Write))
+            {
+                n.Serialize(fs);
+            }
+            
+            using (var fs = new FileStream("node.xml", FileMode.Open, FileAccess.Read))
+            {
+                n = DDNodeSxe.Deserialize(fs);
+            }
+        }
+
+
+        [TestMethod]
         public void TestNullSerialization()
         {
             var n = new DDNode();

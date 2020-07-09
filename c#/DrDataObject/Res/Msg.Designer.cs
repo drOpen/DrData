@@ -196,7 +196,7 @@ namespace DrOpen.DrData.DrDataObject.Res {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The node with name &apos;{0}&apos; already exists..
+        ///   Looks up a localized string similar to The node with name &apos;{0}&apos; is already exists..
         /// </summary>
         internal static string NODE_EXISTS {
             get {
