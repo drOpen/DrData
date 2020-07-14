@@ -1674,9 +1674,58 @@ namespace UTestDrData
         {
             var root = GetStockHierarhy();
             root.Rename(root.Name);
+            Assert.AreSame(root.Name, "a", "The new name of the root 'a' is not the same");
             var child = root["a.b"];
             child.Rename(child.Name);
+            Assert.AreSame(child.Name, "a.b", "The new name of the child node 'a.b' is not the same");
         }
+
+        [TestMethod, TestCategory(TEST_CATEGORY), TestCategory("Rename")]
+        public void TestRenameRoot()
+        {
+            var root = GetStockHierarhy();
+            root.Rename(root.Name);
+            var child = root["a.b"];
+            var newName = "newName";
+            child.Rename(newName);
+            Assert.AreSame(child.Name, newName, "The new name '{0}' is not correct.", newName);
+            Assert.IsFalse(child.IsRoot, "The child node lost its parent.");
+            Assert.AreSame(child.GetRoot().Name, root.Name, "The child node parent is incorrect. It has lost the original parent and has not connected back.");
+        }
+
+        [TestMethod, TestCategory(TEST_CATEGORY), TestCategory("Rename")]
+        public void TestRenameToIncorrectName()
+        {
+            var root = GetStockHierarhy();
+            try
+            {
+                root.Rename(".");
+                Assert.Fail("The incorrect name of the node was allowed.");
+            }
+            catch (DDNodeIncorrectNameException e)
+            {
+                // cool
+            }
+        }
+
+        [TestMethod, TestCategory(TEST_CATEGORY), TestCategory("Rename")]
+        public void TestRenameToExistingName()
+        {
+            var root = GetStockHierarhy();
+            var child = root["a.b"];
+            try
+            {
+                child.Rename("a.c");
+                Assert.Fail("The dublicate name of the node was allowed.");
+            }
+            catch (DDNodeExistsException e)
+            {
+                // cool
+            }
+        }
+
+
+
         #endregion Rename
 
     }
